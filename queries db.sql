@@ -1,3 +1,5 @@
+-- Active: 1701819695659@@127.0.0.1@3306@sena
+
 -- Active: 1700095530729@@127.0.0.1@3306@SENA
 
 #######################################################################
@@ -107,9 +109,9 @@ CREATE TABLE IF NOT EXISTS ENROLLMENTS (
 -- CREATE ENROLLED COURSES TABLE ( REFERENCE TO THE ENROLL WITH IT'S COURSES )
 
 CREATE TABLE IF NOT EXISTS ENROLLED_COURSES (
-    id_enrollmentS INT NOT NULL,
+    id_enrollment INT NOT NULL,
     id_course_route INT,
-    CONSTRAINT FOREIGN KEY (id_enrollmentS) REFERENCES ENROLLMENTSS(id_enrollmentS),
+    CONSTRAINT FOREIGN KEY (id_enrollment) REFERENCES ENROLLMENTS(id_enrollment),
     CONSTRAINT FOREIGN KEY (id_course_route) REFERENCES COURSES_ROUTE(id_course_route)
 );
 
